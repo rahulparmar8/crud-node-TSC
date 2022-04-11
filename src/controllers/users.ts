@@ -22,7 +22,7 @@ export default class Product {
     // Get All Product Data //
     getProductData = async (req: Request, res: Response) => {
         try {
-            const tabel = await ProductModel.findById({ _id : req.params.id  });
+            const tabel = await ProductModel.findById({ _id: req.params.id });
             return res.status(200).json(tabel)
         } catch (error) {
             console.log(error);
